@@ -1,0 +1,90 @@
+﻿div#menu {
+	width:12em;
+	height:1.5em;
+	background-color:#545454;
+}
+ul#navigation{
+	font-size: 90%;
+}
+ul#navigation, ul#navigation ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+ul#navigation li { 
+	line-height : 1.35em;
+	position: relative;
+	float: left;
+}
+ul#navigation li li { 
+	float: none;
+}
+#navigation a {
+	display: block;
+	width: 9em;
+	color: white;
+	background-color: #545454;
+}
+ul#navigation a:hover {
+	color:silver;
+	background-color:navy;
+}
+ul#navigation li ul {
+	position: absolute;
+	left: -999em;
+}
+#navigation li:hover ul ul, #navigation li.sfhover ul ul {
+	left: -999em;
+}
+#navigation li:hover ul, #navigation li li:hover ul, #navigation li li li:hover ul {
+	top: 0;
+	left: 0;
+	margin-left: 100%;
+}
+/* COMMENT A: ****DISPLAYS HORIZONTAL MENU**** */
+#navigation li:hover ul {
+	top: 100%;
+	margin-left: 0;
+}
+div#menu {
+	width:100%;
+}
+/* COMMENT B: comment out everything between COMMENT A and COMMENT B to transform horizontal menues into vertical menues */
+ul#navigation li li a {
+	width: 11em;
+}
+ul#navigation li li li a {
+	width: 14em;
+}
+ul#navigation{
+	font-size: 90%;
+	position:relative;
+	/* the line below causes the navigation bar to be shifted to the left of the entire screen */
+	left:0;
+}
+ul#navigation, ul#navigation ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	border-left: 1px solid black;
+	border-bottom: 0.04em solid black;
+}
+#navigation a {
+	display: block;
+	/* the line below gives too much padding
+	width: 9em; /* ****CHANGE-MENU**** */
+	color: white;
+	background-color: #545454;
+	padding: 4px .5em;
+	text-decoration: none;
+	border-top: 0.04em solid black;
+	border-right: 1px solid black;
+}
+#navigation li:hover ul, #navigation li li:hover ul, #navigation li li li:hover ul {
+	top: 0;
+	left: -1px;
+	margin-left: 100%;
+}
+
+
+

@@ -1,0 +1,122 @@
+﻿div#menu {
+
+	position:absolute;
+	left:0;
+/*
+	width:9em;
+*/	
+	width:955px;
+	height:2.0em;
+	background-color:#545454;
+	margin-top:-5px;
+}
+ul#navigation{
+	font-family: Tahoma,Helvetica, Arial,sans-serif;
+	font-size: 90%; /*          ****CHANGE**** change for larger or smaller font */
+	position:absolute;
+	left:0;
+	position: relative;
+	left: 0;
+}
+ul#navigation, ul#navigation ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	border-left: 1px solid black;
+	border-bottom: 0.04em solid black;
+}
+ul#navigation li { 
+	line-height : 1.35em;
+	position: relative;
+	float: left;
+}
+ul#navigation>li li { /* Needed for Opera 9, maybe because it's decent CSS. Hide from IE6 */
+	float: none;
+}
+
+#navigation li a, #navigation li span {
+	display: block;
+	text-decoration: none;
+	color:white;
+	background-color: #545454;
+/*
+	color: #006600;
+	background-color: #C0EFBE;
+*/
+	width: 6em; /*          ****CHANGE-MENU**** */
+	padding: 4px 0.5em;
+	border-top: 0.04em solid black;/*0.04em*/
+	border-right: 1px solid black;
+}
+
+
+ul#navigation li li a, ul#navigation li li span {
+	width: 8em; /*           ****CHANGE-SUBMENU**** */
+	text-align:left;
+}
+
+ul#navigation li li li a, ul#navigation li li li span {
+	width: 14em; /*           ****CHANGE-SUBMENU**** */
+}
+
+ul#navigation li li.longitem li span {
+	width: 16em; /*           ****CHANGE-SUBMENU**** */
+}
+
+
+
+ul#navigation li a:hover, ul#navigation ul li:hover a:hover, ul#navigation li span:hover, ul#navigation ul li:hover span:hover, ul#navigation li span.sfhover, ul#navigation ul li.sfhover span.sfhover { /* The hovered style for submenus */
+	color: silver;
+	background-color: navy;
+}
+
+
+ul#navigation li ul { /* Hides the first unhovered submenu */
+	position : absolute;
+	left: -999em;
+}
+#navigation li:active ul ul, #navigation li:active ul ul ul, #navigation li:hover ul ul, #navigation li:hover ul ul ul, #navigation li.sfhover ul ul, #navigation li.sfhover ul ul ul {
+	left: -999em; /* Hides the second and following unhovered submenus */
+}
+
+
+#navigation li:hover ul, #navigation li li:hover ul, #navigation li li li:hover ul, #navigation li.sfhover ul, #navigation li li.sfhover ul, #navigation li li li.sfhover ul {
+	top: 0;
+	left: -1px;
+	margin-left: 100%;
+}
+
+
+/*                       ****DISPLAYS HORIZONTAL MENU(2) ******* */
+#navigation li:hover ul, #navigation li a:focus ul, #navigation li.sfhover ul {
+	top: 100%;
+	margin-left: 0;
+}
+div#menu {
+	width:100%;
+}
+
+/* Submenu arrow indicator */
+
+
+#navigation span:hover, #navigation span.sfhover {
+	cursor:default;
+}
+
+
+/* BACKGROUND EFFECTS */
+
+/* Allows each succesive parent list item and the hovered submenu to have a lighter background color */
+
+#navigation li:hover a, #navigation li:hover span, #navigation li.sfhover a, #navigation li.sfhover span {
+	color: #f0f0f0; /*#005000;*/
+	background-color: #747474; /*#C0DFA7*//*94D9A0*/
+}
+ul#navigation li ul li:hover a, ul#navigation li ul li:hover span, ul#navigation li ul li.sfhover a, ul#navigation li ul li.sfhover span {
+	color: #f4f4f4; /*#003300;*/
+	background-color: #949494; /*#B0D797*//*78C381*/
+}
+ul#navigation li ul ul li:hover a, ul#navigation li ul ul li:hover span, ul#navigation li ul ul li.sfhover a, ul#navigation li ul ul li.sfhover span {
+	color: white; /*000;*/
+	background-color: #b4b4b4;/*5BAD63*/
+}
